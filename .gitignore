@@ -1,0 +1,13 @@
+# Local credentials and runtime data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+claude-path.txt
+mcp-config*.json
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
