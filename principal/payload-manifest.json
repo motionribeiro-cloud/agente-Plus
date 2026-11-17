@@ -12,7 +12,7 @@
     {
       "name": "adobe",
       "files": 35,
-      "sha256": "138f799f404c1ad9dc1fb73c76a09dea31d55fe6c66b9c28e58f61748b787387"
+      "sha256": "5dc1c74e3ba47107636f15cc5a3c593f9054e235fa619885a173bdb02eff2bb8"
     },
     {
       "name": "blender",
@@ -27,7 +27,7 @@
     {
       "name": "hub",
       "files": 16,
-      "sha256": "b85ace5604703896fe0e0d0cece01011080422130268ed9faeea68f83a9805b4"
+      "sha256": "ee4dd4b4713a7acf24aea24dfea6b2cc7c3026e219ddcb0efc73b6aec3b38757"
     },
     {
       "name": "python",

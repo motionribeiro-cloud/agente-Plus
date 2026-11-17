@@ -6,6 +6,8 @@ if (!(Test-Path -LiteralPath $compilerPath)) { throw 'Compilador .NET Framework 
 if ($LASTEXITCODE -ne 0) { throw 'Falha na preparação dos pacotes.' }
 & python (Join-Path $projectRoot 'test_mcp.py')
 if ($LASTEXITCODE -ne 0) { throw 'Testes MCP/Claude Python falharam.' }
+& python (Join-Path $projectRoot 'test_updater.py')
+if ($LASTEXITCODE -ne 0) { throw 'Atualizador manual da preview falhou.' }
 & python (Join-Path $projectRoot 'test_knowledge.py')
 if ($LASTEXITCODE -ne 0) { throw 'Testes das bibliotecas de conhecimento falharam.' }
 & node (Join-Path $projectRoot 'test_claude_health.js')

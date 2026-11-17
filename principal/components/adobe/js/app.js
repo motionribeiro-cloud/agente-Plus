@@ -1472,7 +1472,7 @@
     var body = L("**Version:** ", "**Versão:** ") + SOMA_INFO.version + L("\n**Program:** ", "\n**Programa:** ") + HOST.name +
       L("\n**System:** ", "\n**Sistema:** ") + navigator.platform + L("\n**AI:** ", "\n**IA:** ") + providerLabel() +
       L("\n\n**What happened, or what do you suggest?**\n\n", "\n\n**O que aconteceu ou o que você sugere?**\n\n");
-    return "https://github.com/alanomoxo/soma-agente/issues/new?title=" + encodeURIComponent("[" + HOST.name + " " + SOMA_INFO.version + "] ") + "&body=" + encodeURIComponent(body);
+    return "https://github.com/motionribeiro-cloud/agente-Plus/issues/new?title=" + encodeURIComponent("[" + HOST.name + " " + SOMA_INFO.version + "] ") + "&body=" + encodeURIComponent(body);
   }
 
   // Preferences stay per provider so each keeps its own model and effort.

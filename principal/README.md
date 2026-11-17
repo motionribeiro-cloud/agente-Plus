@@ -22,7 +22,7 @@ Os trechos recuperados são enviados ao provedor de IA escolhido como contexto. 
 
 ## Instalação e MCP
 
-Feche os aplicativos que pretende atualizar. Confira componentes, destinos e bibliotecas no resumo. A instalação prepara pacotes, mantém backups e tenta reverter alterações se uma etapa falhar. A desinstalação move os destinos gerenciados para pastas `.removed`, preservando os arquivos.
+Feche os aplicativos que pretende atualizar e encerre o Soma Hub antigo antes de substituir esse componente. Confira componentes, destinos e bibliotecas no resumo. A instalação prepara pacotes, mantém backups e tenta reverter alterações se uma etapa falhar. A desinstalação move os destinos gerenciados para pastas `.removed`, preservando os arquivos.
 
 O botão **Perfis MCP** abre os perfis dos componentes selecionados. Mescle-os às configurações de Claude Desktop/Code ou Codex e recarregue o cliente. Os servidores existentes devem ser preservados. O Hub usa loopback e credencial local; nenhum túnel público é aberto.
 
@@ -41,3 +41,5 @@ O motor canônico é `components/hub/bridge/soma_knowledge.py`; o build o replic
 Consulte `VALIDACAO.md`. A biblioteca, o protocolo e o instalador foram testados com o Python embarcado real. A aba Conhecimento ainda precisa de teste dentro do CEP atualizado. As expressões não foram validadas no motor nativo AE. Nenhum projeto de produção foi fechado ou editado para validar a preview.
 
 A reversão cobre exceções, não interrupção abrupta ou queda de energia. A configuração CEP é opcional e não é restaurada automaticamente na desinstalação, pois outros painéis podem depender dela. O EXE não tem assinatura digital; a licença do código Soma permanece a definir.
+
+Atualizações desta preview são manuais: o botão abre as releases deste repositório. O Hub não executa instaladores em segundo plano nem usa o repositório de atualização herdado.

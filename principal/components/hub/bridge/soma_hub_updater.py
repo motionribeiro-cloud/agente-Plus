@@ -1,12 +1,7 @@
-"""Soma Hub auto-update from GitHub Releases.
+"""Manual update checks for the Soma preview; never launches downloaded installers.
 
-Every few hours the hub reads the latest Release of the Soma Agente repository.
-When its tag is newer than the installed version, it downloads the installer,
-checks it against the SHA-256 published in the same Release, and runs it with
-/update (only the programs that already have Soma) once no Adobe program with
-the panel is open — the installer replaces panel files, so those must be closed.
-
-Turn it off by creating auto-update-off.txt in the data folder.
+The update button opens the project's release page. No background auto-install
+or silent /update mode is supported by this preview installer.
 """
 import hashlib
 import json
@@ -20,9 +15,9 @@ from soma_core import VERSION, system
 from soma_core.extensions import _ssl_context
 from soma_core.i18n import L
 
-REPOSITORY = "alanomoxo/soma-agente"
+REPOSITORY = "motionribeiro-cloud/agente-Plus"
 API = "https://api.github.com/repos/%s/releases/latest" % REPOSITORY
-RELEASES_PAGE = "https://github.com/%s/releases/latest" % REPOSITORY
+RELEASES_PAGE = "https://github.com/%s/releases" % REPOSITORY
 INSTALLER = "Soma-Agente-Instalador.exe"
 CHECK_EVERY = 6 * 3600
 RETRY_EVERY = 10 * 60
@@ -90,8 +85,7 @@ class Updater:
             return dict(self.state)
 
     def start(self):
-        if system.WINDOWS:
-            threading.Thread(target=self._loop, daemon=True).start()
+        self._set(status="manual", detail="Atualizações desta preview são manuais; use a página de releases do Soma.")
 
     def _loop(self):
         self.wake.wait(float(os.environ.get("SOMA_UPDATE_FIRST_DELAY", "60")))
@@ -130,36 +124,13 @@ class Updater:
         return self.snapshot()
 
     def request_install(self):
-        """The user asked to update now: install as soon as no Adobe program is open.
-        The Mac has no automatic install: the download page opens instead."""
-        if not system.WINDOWS:
-            system.open_url(RELEASES_PAGE)
-            self._set(requested=False, status="manual", detail=L("Download the new version on the page that opened and run its installer.",
-                                                                 "Baixe a versão nova na página que abriu e rode o instalador."))
-            return self.snapshot()
-        self._set(requested=True)
-        self.wake.set()
+        system.open_url(RELEASES_PAGE)
+        self._set(requested=False, status="manual", detail="Baixe a atualização na página de releases e execute o instalador com os aplicativos fechados.")
         return self.snapshot()
 
     def check_and_install(self):
-        """One round. Returns how long to wait before the next round."""
-        release, newer = self._fetch()
-        latest = release.get("tag_name", "")
-        if not newer:
-            self._set(status="up-to-date", detail="", requested=False)
-            return CHECK_EVERY
-        if not self.ready_path or not os.path.exists(self.ready_path):
-            self.ready_path = self._download(release)
-        if self.dry_run:
-            self._set(status="downloaded", detail=self.ready_path)
-            return CHECK_EVERY
-        running = _adobe_running()
-        if running:
-            self._set(status="waiting", detail=L("Close %s to install version %s.", "Feche o %s para instalar a versão %s.") % (", ".join(n.replace(".exe", "") for n in running), latest.lstrip("vV")))
-            return RETRY_EVERY
-        self._set(status="installing", detail=L("Installing version %s…", "Instalando a versão %s…") % latest.lstrip("vV"))
-        # Detached: the installer stops and restarts this hub while it runs.
-        subprocess.Popen([self.ready_path, "/silent", "/update"], creationflags=0x00000008 | 0x00000200, close_fds=True)
+        self.check(force=True)
+        self._set(requested=False, status="manual", detail="Instalação automática desativada nesta preview. Use a página de releases.")
         return CHECK_EVERY
 
     def _download(self, release):

@@ -30,8 +30,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from . import attachments, extensions, system, claude_health, knowledge
 from .i18n import L
 
-VERSION = "1.7.11"
-FEEDBACK_URL = "https://github.com/alanomoxo/soma-agente/issues/new"
+VERSION = "1.9.0-preview"
+FEEDBACK_URL = "https://github.com/motionribeiro-cloud/agente-Plus/issues/new"
 CLAUDE_EFFORTS = ["low", "medium", "high", "xhigh", "max"]
 CLAUDE_MODELS = [
     {"id": "default", "model": None, "name": "Claude (default)", "efforts": [], "effort": None},

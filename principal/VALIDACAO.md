@@ -15,3 +15,5 @@
 A aba Conhecimento precisa ser aberta no CEP atualizado para conferir escolher, conectar e consultar uma pasta. Edição em Photoshop, Illustrator, Premiere, Blender, Cinema 4D e Figma não foi validada nesta rodada. ChatGPT web não foi configurado.
 
 Importação de arquivos, presença de ferramentas, resposta MCP e resultado visual são etapas diferentes e precisam de verificação própria.
+
+- Regressão adicional do atualizador: consulta e pedido de atualização não iniciam thread automática nem executam instalador; o link é o repositório escolhido.

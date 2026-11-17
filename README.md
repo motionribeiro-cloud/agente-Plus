@@ -36,3 +36,5 @@ Um Brain local usa uma seleção técnica explícita. Os caminhos e documentos p
 `source/` preserva o código histórico da release 1.3.0. O desenvolvimento atual está em `principal/`. Releases anteriores foram mantidas.
 
 A preview tem testes de biblioteca, MCP e instalação em pastas temporárias, incluindo o Python embarcado. O instalador foi conferido visualmente. A nova aba precisa de validação dentro do CEP atualizado; não há promessa de funcionamento universal dos hosts. O EXE não tem assinatura digital. A licença do código Soma permanece a definir; disponibilidade pública não equivale a licença open source. O Python embarcado mantém sua licença própria.
+
+Atualizações da preview são manuais e apontam para as releases deste repositório. Encerre o Hub antigo antes de atualizar esse componente.
