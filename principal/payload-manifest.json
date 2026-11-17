@@ -1,0 +1,38 @@
+{
+  "installerVersion": "1.9.0-preview",
+  "payloadVersion": "mixed-see-readme",
+  "sources": {
+    "adobe": "installed-1.7.11-with-local-health-fix",
+    "hub": "installed-1.7.11-with-scoped-mcp-and-health-fix",
+    "blender": "original-installer-1.4.1-with-health-fix",
+    "cinema4d": "original-installer-1.4.1-with-health-fix",
+    "python": "unchanged-original-installer-runtime"
+  },
+  "payloads": [
+    {
+      "name": "adobe",
+      "files": 35,
+      "sha256": "138f799f404c1ad9dc1fb73c76a09dea31d55fe6c66b9c28e58f61748b787387"
+    },
+    {
+      "name": "blender",
+      "files": 7,
+      "sha256": "93c9937fd62e6e24853655e005b729ddd3f837cc36aab2b34a47e474b6e82f0a"
+    },
+    {
+      "name": "cinema4d",
+      "files": 7,
+      "sha256": "90db464323af5cda467735a3251184ac71d0715eceef21b0c3258e25e5187439"
+    },
+    {
+      "name": "hub",
+      "files": 16,
+      "sha256": "b85ace5604703896fe0e0d0cece01011080422130268ed9faeea68f83a9805b4"
+    },
+    {
+      "name": "python",
+      "files": 35,
+      "sha256": "4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3"
+    }
+  ]
+}

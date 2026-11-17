@@ -1,37 +1,38 @@
-# Soma Agente 1.3.0
+# Soma Agente
 
-Experimental creative-software integrations connecting local Claude Code or Codex agents to application tools through MCP.
+Agente para softwares criativos, MCP por aplicativo e bibliotecas de conhecimento conectadas. Versão atual: **1.9.0 preview**, destinada a testes.
 
-## Project status
+## Instalador principal
 
-Experimental source package prepared for publication. No public adoption metrics are available. Integrations listed below are present in source; compatibility and end-to-end behavior have not been verified during this review.
+[Baixar instalador Windows 1.9.0 preview](https://github.com/motionribeiro-cloud/agente-Plus/releases/download/v1.9.0-preview/Soma-Agente-Instalador-1.9.0-preview.exe)
 
-## Included integrations
+Selecione os componentes e confira os destinos. O instalador mantém backups, oferece diagnóstico e permite escolher uma pasta de complemento e uma pasta privada de conhecimento.
 
-- Adobe CEP panel with host adapters for After Effects, Photoshop, Illustrator and Premiere Pro.
-- Figma development plugin with a local Python bridge.
-- Blender add-on.
-- Cinema 4D plugin.
+Inclui Adobe CEP (After Effects, Photoshop, Illustrator e Premiere Pro), Figma/Hub, Blender e Cinema 4D. A presença de código não comprova compatibilidade funcional com toda versão desses aplicativos.
 
-## Architecture
+## Complementares
 
-The source includes local MCP servers and provider adapters for Claude Code and Codex. The Adobe implementation includes application scripting tools and code for media attachments, references and voice workflows. Availability depends on the application, provider and local dependencies. A subscription is not included.
+[Baixar Soma Conhecimento Essencial 1.0.0](https://github.com/motionribeiro-cloud/agente-Plus/releases/download/v1.9.0-preview/Soma-Conhecimento-Essencial-1.0.0.zip) · [Ver os materiais](complementares/Soma-Conhecimento-1.0.0/README.md)
 
-## Source layout
+Pacote inicial com oito guias e três expressões: direção, SaaS, explicativo, institucional, timing/curvas, After Effects, revisão, bounce, overshoot e easing. Os exemplos têm testes numéricos JavaScript; não há validação nativa AE. É uma seleção editorial própria, não uma exportação de notas privadas ou arquivos de cursos.
 
-- `source/Soma Agente/`: Adobe panel and installation scripts.
-- `source/Figma/`: Figma plugin and bridge.
-- `source/Blender/`: Blender add-on.
-- `source/Cinema 4D/`: Cinema 4D integration.
+## Como conectar
 
-The original installation instructions and README are preserved under `source/Soma Agente/`. The original README describes an older AE Agent version and does not establish validation of all 1.3.0 integrations.
+1. Extraia o complemento em um local permanente.
+2. Selecione a pasta no instalador ou abra **engrenagem → Conhecimento → Escolher pasta → Conectar pasta** no painel atualizado.
+3. Escolha a pasta que contém `soma-knowledge.json`, não o ZIP.
+4. Peça, por exemplo: “planeje uma animação SaaS” ou “busque uma expressão de bounce, sem aplicá-la”.
 
-## Intended direction
+A mesma seção permite conectar outras bibliotecas. Os arquivos são consultados em modo de leitura e trechos pertinentes são enviados à IA escolhida como contexto. Os MCPs oferecem busca e leitura para os chats. Desconectar preserva os arquivos; mudanças autorizadas entram nas próximas consultas.
 
-Develop a creative assistant informed by practical art direction and animation knowledge: composition, hierarchy, timing, easing and editable production workflows. This is the development vision, not a claim that every capability is already implemented.
+Um Brain local usa uma seleção técnica explícita. Os caminhos e documentos privados do estúdio não estão neste repositório nem no complemento. Bibliotecas privadas não são publicadas automaticamente.
 
-## Authorship and license status
+## Código e validação
 
-Igor Ribeiro confirmed authorship of both Soma Agente and the AE Agent 0.8.1 base referenced in the bundled documentation. The original documentation is preserved for provenance.
+- [Código atual e compilação](principal/README.md)
+- [Verificações e limites](principal/VALIDACAO.md)
+- [Release: instalador, complemento e fontes](https://github.com/motionribeiro-cloud/agente-Plus/releases/tag/v1.9.0-preview)
 
-No distribution license has been selected for this package yet. Public source availability alone does not make a project open source. Reuse permissions will be defined by the author in a future LICENSE file.
+`source/` preserva o código histórico da release 1.3.0. O desenvolvimento atual está em `principal/`. Releases anteriores foram mantidas.
+
+A preview tem testes de biblioteca, MCP e instalação em pastas temporárias, incluindo o Python embarcado. O instalador foi conferido visualmente. A nova aba precisa de validação dentro do CEP atualizado; não há promessa de funcionamento universal dos hosts. O EXE não tem assinatura digital. A licença do código Soma permanece a definir; disponibilidade pública não equivale a licença open source. O Python embarcado mantém sua licença própria.

@@ -1,0 +1,144 @@
+{
+  "name": "Soma Conhecimento Essencial",
+  "version": "1.0.0",
+  "distribution": "public",
+  "language": "pt-BR",
+  "documents": [
+    {
+      "path": "expressoes/bounce-position.jsx",
+      "title": "bounce-position",
+      "tags": [
+        "expressoes",
+        "bounce",
+        "after",
+        "effects"
+      ],
+      "summary": "Soma: Position 2D/3D. Rebote visual, não simulação física.",
+      "status": "testes JavaScript de sintaxe e valores; sem validação nativa AE"
+    },
+    {
+      "path": "expressoes/ease-opacity.jsx",
+      "title": "ease-opacity",
+      "tags": [
+        "expressoes",
+        "ease",
+        "after",
+        "effects"
+      ],
+      "summary": "Soma: Opacity 0..100, iniciada no inPoint. Não requer keyframes.",
+      "status": "testes JavaScript de sintaxe e valores; sem validação nativa AE"
+    },
+    {
+      "path": "expressoes/overshoot-scalar.jsx",
+      "title": "overshoot-scalar",
+      "tags": [
+        "expressoes",
+        "overshoot",
+        "after",
+        "effects"
+      ],
+      "summary": "Soma: propriedade NUMÉRICA com keyframes, por exemplo Rotation.",
+      "status": "testes JavaScript de sintaxe e valores; sem validação nativa AE"
+    },
+    {
+      "path": "guias/01-direcao-e-briefing.md",
+      "title": "Direção de arte e briefing",
+      "tags": [
+        "direcao",
+        "briefing",
+        "motion"
+      ],
+      "summary": "Direção de arte e briefing",
+      "status": "síntese editorial própria; depende do briefing e de revisão",
+      "role": "core"
+    },
+    {
+      "path": "guias/02-saas.md",
+      "title": "SaaS: interface, narrativa e demonstração",
+      "tags": [
+        "saas",
+        "interface",
+        "dashboard",
+        "produto",
+        "demo"
+      ],
+      "summary": "SaaS: interface, narrativa e demonstração",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/03-explicativo.md",
+      "title": "Vídeo explicativo: ensinar uma ideia",
+      "tags": [
+        "explicativo",
+        "explainer",
+        "didatico"
+      ],
+      "summary": "Vídeo explicativo: ensinar uma ideia",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/04-institucional.md",
+      "title": "Vídeo institucional: mensagem e evidência",
+      "tags": [
+        "institucional",
+        "empresa",
+        "marca"
+      ],
+      "summary": "Vídeo institucional: mensagem e evidência",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/05-expressoes.md",
+      "title": "Expressões: bounce, overshoot e easing",
+      "tags": [
+        "expressoes",
+        "expressions",
+        "bounce",
+        "overshoot",
+        "ease",
+        "easing"
+      ],
+      "summary": "Expressões: bounce, overshoot e easing",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/06-timing-e-curvas.md",
+      "title": "Timing, curvas e continuidade",
+      "tags": [
+        "timing",
+        "curvas",
+        "ease",
+        "easing",
+        "continuidade"
+      ],
+      "summary": "Timing, curvas e continuidade",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/07-after-effects.md",
+      "title": "After Effects: implementação editável",
+      "tags": [
+        "after",
+        "effects",
+        "ae",
+        "keyframes",
+        "rig"
+      ],
+      "summary": "After Effects: implementação editável",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    },
+    {
+      "path": "guias/08-revisao.md",
+      "title": "Revisão e entrega de motion",
+      "tags": [
+        "revisao",
+        "entrega",
+        "qa",
+        "preview",
+        "render"
+      ],
+      "summary": "Revisão e entrega de motion",
+      "status": "síntese editorial própria; depende do briefing e de revisão"
+    }
+  ]
+}
